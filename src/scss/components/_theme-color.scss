@@ -1,0 +1,397 @@
+@import 'contrast';
+
+//colors
+$white: white;
+$gray: gray;
+$color_alto_approx: #ddd;
+$black_30: rgba(0,0,0,0.3);
+$black_50: rgba(0,0,0,0.5);
+$white_50: rgba(255,255,255,0.5);
+$color_mine_shaft_approx: #333;
+$color_celeste_approx: #ccc;
+$color_gallery_approx: #eee;
+$color_crimson_approx: #d14;
+$color_japanese_laurel_approx: green;
+$color_steel_blue_approx: #337ab7;
+
+$color1: white;
+$color2: gray;
+
+$colormix: mix($color1, $color2, 50%);
+
+$color1-dark10: darken($color1, 10%);
+$color1-dark20: darken($color1, 20%);
+$color1-dark30: darken($color1, 30%);
+$color1-dark50: darken($color1, 50%);
+
+$color2-dark10: darken($color2, 10%);
+$color2-dark20: darken($color2, 20%);
+$color2-dark30: darken($color2, 30%);
+$color2-dark50: darken($color2, 50%);
+
+$color1-light10: lighten($color1, 10%);
+$color1-light20: lighten($color1, 20%);
+$color1-light30: lighten($color1, 30%);
+$color1-light50: lighten($color1, 50%);
+
+$color2-light10: lighten($color2, 10%);
+$color2-light20: lighten($color2, 20%);
+$color2-light30: lighten($color2, 30%);
+$color2-light50: lighten($color2, 50%);
+
+$colormix-dark10: darken($colormix, 10%);
+$colormix-dark20: darken($colormix, 20%);
+$colormix-dark40: darken($colormix, 40%);
+$colormix-dark60: darken($colormix, 60%);
+
+$colormix-light10: lighten($colormix, 10%);
+$colormix-light20: lighten($colormix, 20%);
+$colormix-light40: lighten($colormix, 40%);
+$colormix-light60: lighten($colormix, 60%);
+
+body {
+	background-color: desaturate($color1-dark10,30%);
+	color: contrasted($color1-dark10, $color2-dark30, $color2-light30);
+}
+a {
+	text-decoration: none!important;
+}
+a:hover {
+	color: contrasted(desaturate($color1-dark10,30%), $color2-dark30, $color2-light30);
+}
+.page {
+	background-color: $color1;
+}
+.head {
+	.topbar {
+		background-color:$colormix-light10;
+		.left {
+			background-color:inherit;
+		}
+		.right {
+			background-color:inherit;
+		}
+	}
+	.navibar {
+		background-color: $color2-light20;
+		ul {
+			li {
+				background-color:$color2-light20;
+				color: contrasted($color2-light20, $color2-dark30, $color2-light30);
+				a {
+					color: contrasted($color2-light20, $color2-dark30, $color2-light30);
+				}
+				&.active {
+					background-color:$color2-dark10;
+					color: contrasted($color2-dark10, $color2-dark30, $color2-light30);
+					.submenu {
+					
+					}
+				}
+				&:hover {
+					background-color: $color2-dark10;
+					color: contrasted($color2-dark10, $color2-dark30, $color2-light30);
+					a {
+						color: inherit;
+					}
+				}
+				.submenu {
+					background-color: $color2;
+					color: contrasted($color2, $color2-dark30, $color2-light30);
+					li {
+						background-color: inherit;
+						color: inherit;
+						a{
+							color: contrasted($color2, $color2-dark30, $color2-light30);
+							&:hover{
+								color: contrasted($color2, #222, #fff);
+							}
+						}
+						&:hover{
+							color: contrasted($color2, #222, #fff);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.content {
+	background-color:$color1-light30;
+	color:desaturate($colormix-dark40,50%);
+}
+#frontslides {
+	.slide {
+		.slide-image {
+		}
+		.slide-screen-effect {
+			background-color: $black_30;
+		}
+		.slide-content {
+			color: $white;
+			h2 {
+
+			}
+			span {
+
+			}
+			.call-to-action {
+				background-color: $white;
+			}
+		}
+	}
+	.owl-controls {
+		background-color: $black_50;
+		.owl-dots {
+			color: $color2-dark30;
+			&:after {
+			
+			}
+			.owl-dot {
+				background-color: $color2;
+				&.active {
+					background-color: $color2-light10;
+				}
+				&:last-child {
+
+				}
+			}
+		}
+	}
+	.owl-nav {
+		.owl-prev {
+			background-color: $white_50;
+		}
+		.owl-next {
+			background-color: $white_50;
+		}
+	}
+}
+
+#showcase {
+	background-color:$color2-light20;
+	.showcase-nav {
+		background-color:$color2-light10;
+		a {
+			background-color: $color2-light20;
+			color: $color_mine_shaft_approx;
+			&.no_more {
+
+			}
+			&.next_link {
+
+			}
+			&.previous_link {
+
+			}
+			&:last-child {
+
+			}
+			&.active_page {
+				background-color: $color2-dark10;
+				color: $white;
+			}
+		}
+	}
+	.showcase-content .showcase-item {
+		.outer {
+			.inner {
+				background-color: $color_celeste_approx;
+			}
+		}
+	}
+}
+#article{
+	background-color:$color1-light10;
+	color: contrasted($color1-light10, $color1-dark50, $color1-light50);
+}
+.article-content {
+	ul {
+	}
+	a{
+		color: contrasted($color1-light10, $color1-dark50, $color1-light50);
+		&:hover{
+			color: contrasted($color1-light10, $color1-dark20, $color1-light20);
+		}
+	}
+
+}
+.sidebar {
+	background-color: $color2-light10;
+	color:contrasted($color2-light10, $color2-dark30, $color2-light30);
+	textarea {
+	}
+}
+.foot {
+	background-color: $colormix-light10;
+	.navifoot {
+		h4{
+			color: contrasted($colormix-light10, $colormix-dark40, $colormix-light40);
+		}
+		ul {
+			li {
+				color: contrasted($colormix-light10, $colormix-dark40, $colormix-light40);
+				a{
+					color:inherit;
+					&:hover{
+						color: contrasted($colormix-light10, $colormix-dark60, $colormix-light60);
+					}
+				}
+			}
+		}
+	}
+}
+.footlines {
+	.line-creditcards {
+		img {
+		}
+	}
+	.line-colophon {
+		color: contrasted($colormix-light10, $colormix-dark40, $colormix-light40);
+	}
+}
+
+@media only screen and(min-width : 0px) {
+	body {
+	}
+	.page {
+	}
+	.head {
+		.topbar {
+			.navibar {
+			}
+			.logo {
+				img {
+				}
+			}
+		}
+		.nav-mobile {
+			background-color: $white;
+			.navibar {
+				.menu-button {
+				}
+				ul {
+					background-color: $white;
+					li {
+						&.active {
+							background-color: $gray;
+							color: $white;
+							.submenu {
+							}
+						}
+						a {
+						}
+						&:hover {
+							background-color: $gray;
+							color: $white;
+						}
+						.submenu {
+							background-color: gray; 
+							color: $white;
+							li {
+							}
+						}
+					}
+				}
+			}
+			&.active .navibar ul {
+			}
+		}
+		.nav-full {
+			.navibar {
+				.menu-button {
+				}
+				ul li.active .submenu {
+				}
+			}
+		}
+	}
+	#frontslides {
+		.owl-nav {
+		}
+		.owl-dots {
+		}
+		.slide .slide-content {
+			h2 {
+			}
+			span {
+			}
+		}
+	}
+}
+@media only screen and(min-width : 480px) {
+	body {
+	}
+	.page {
+	}
+	.head {
+		.nav-mobile {
+		}
+		.nav-full {
+			.navibar {
+				ul {
+					li {
+						&.active .submenu {
+
+						}
+					}
+				}
+				> ul:after {
+				}
+			}
+		}
+	}
+	#frontslides .slide .slide-content {
+
+		h2 {
+
+		}
+		span {
+
+		}
+	}
+}
+@media only screen and(min-width : 768px) {
+
+}
+@media only screen and(min-width : 992px) {
+
+}
+@media only screen and(min-width : 1200px) {
+
+}
+
+
+
+
+@media only screen and(max-width : 1200px) {
+}
+@media only screen and(max-width : 992px) {
+}
+@media only screen and(max-width : 768px) {
+
+}
+@media only screen and(max-width : 480px) {
+}
+@media only screen and(max-width : 320px) {
+}
+
+.field-validation-error {
+	color: $color_crimson_approx;
+}
+.red {
+	color: $color_crimson_approx;
+}
+.green {
+	color: $color_japanese_laurel_approx;
+}
+.map {
+	max-height: 420px;
+	height: 420px;
+	//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+	border-radius: inherit;
+	margin-top: 20px;
+}
+.align-center {
+	text-align: center;
+}

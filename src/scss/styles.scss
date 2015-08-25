@@ -3,10 +3,18 @@
 
 //reset
 @import "normalize";
+@import "libs/bootstrap";
 
 //icon fonts
 @import "components/icons";
 
+//base styles
+@import "components/base";
+
+//libs
+@import "components/oldcarousel";
+@import "components/oldfancybox";
+@import "components/oldanimate";
 //framework
 //@import "libs/framework-susy";
-@import "libs/framework-bootstrap";
+//@import "libs/framework-bootstrap";

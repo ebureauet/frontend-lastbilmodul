@@ -1,0 +1,42 @@
+
+#showcase {
+	padding-top:10px;
+	.showcase-nav {
+		padding:10px 0px;
+		text-align: center;
+		a {
+			text-decoration: none;
+			display: inline-block;
+			padding: 0 20px;
+			line-height: 50px;
+			margin-right: 2px;
+			&.no_more {
+				display: none;
+			}
+			&.next_link {
+				display: none;
+			}
+			&.previous_link {
+				display: none;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&.active_page {
+			}
+		}
+	}
+	.showcase-content .showcase-item {
+		padding: 0;
+		.outer {
+			padding: 1px;
+			.inner {
+				height: 200px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				display: block;
+			}
+		}
+	}
+}

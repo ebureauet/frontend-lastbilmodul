@@ -1,0 +1,454 @@
+
+
+body {
+
+}
+a {
+	text-decoration: none!important;
+}
+.page {
+	width: 1600px;
+	min-height: 800px;
+	margin: 0 auto;
+}
+
+.content {
+	padding-bottom: 0px;
+}
+
+@import 'head';
+
+@import 'module-frontslides';
+@import 'module-showcase';
+
+#article{
+
+}
+
+.article-content {
+	padding: 30px;
+	ul {
+		padding-left: 20px;
+	}
+}
+.sidebar {
+	padding: 5px 20px 20px;
+	textarea {
+		resize: none;
+	}
+}
+
+.foot {
+	padding: 20px;
+	.navifoot {
+		margin-bottom: 30px;
+		ul {
+			list-style: none;
+			padding-left: 0;
+			li {
+				width:100%;
+				display:block;
+				float: left;
+				a{
+					cursor:pointer;
+				}
+			}
+		}
+	}
+}
+.footlines {
+	.line-creditcards {
+		text-align: center;
+		height: 32px;
+		margin-bottom: 30px;
+		img {
+			line-height: 32px;
+			vertical-align: middle;
+			display: inline;
+			margin: 0 5px;
+		}
+	}
+	.line-colophon {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+.no-side-margins {
+	margin-left: 0;
+	margin-right: 0;
+}
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+.flt {
+	float: left;
+}
+.frt {
+	float: right;
+}
+@media only screen and (min-width : 0px) {
+	body {
+	}
+	.page {
+		max-width: 100%;
+	}
+	.head {
+		.topbar {
+			height: 50px;
+			.navibar {
+			}
+			.logo {
+				height: 100%;
+				img {
+					height: auto;
+					width: auto;
+				}
+			}
+		}
+		.nav-mobile {
+			display: block!important;
+			z-index: 1000;
+			.navibar {
+				.menu-button {
+					float: right;
+				}
+				ul {
+					position: absolute;
+					height: auto;
+					top: 50px;
+					right: 0;
+					width: 100%;
+					z-index: 999;
+					padding: 10px;
+					display: none;
+					li {
+						float: left;
+						width: 100%;
+						line-height: 50px;
+						padding: 0 20px;
+						text-transform: uppercase;
+						cursor: pointer;
+						position: relative;
+						&.active {
+							.submenu {
+								z-index: 9999;
+							}
+						}
+						a {
+							text-transform: uppercase;
+						}
+						&:hover {
+						}
+						.submenu {
+							position: relative;
+							display: none;
+							list-style: none;
+							background-color: gray;
+							z-index:999;
+							top: 0;
+							left: 0;
+							float: left;
+							height: auto;
+							padding-left: 0;
+							li {
+								float: left;
+							}
+						}
+					}
+				}
+			}
+			&.active .navibar ul {
+				display: block;
+			}
+		}
+		.nav-full {
+			display: none!important;
+			.navibar {
+				.menu-button {
+					display: none!important;
+				}
+				ul li.active .submenu {
+					z-index: 9999;
+				}
+			}
+		}
+	}
+	#frontslides {
+		.owl-nav {
+			display: block;
+		}
+		.owl-dots {
+			display: none!important;
+		}
+		.slide .slide-content {
+			top: 10px;
+			h2 {
+				font-size: 32px;
+			}
+			span {
+				font-size: 24px;
+				display: block;
+			}
+		}
+	}
+	.foot{
+		.navifoot{
+			div{
+				ul {
+					text-align:center;
+					li {
+						width: auto;
+						display: inline-block;
+						float:none;
+						&:after {
+							content: ' | ';
+							margin: 0 10px;
+						}
+						&:last-child{
+							&:after{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width : 480px) {
+	body {
+	}
+	.page {
+		max-width: 100%;
+	}
+	.head {
+		.nav-mobile {
+			display: none!important;
+		}
+		.nav-full {
+			display: block!important;
+			.navibar {
+				ul {
+					list-style: none;
+					height: 100%;
+					width: 100%;
+					text-align: justify;
+					overflow: visible;
+					li {
+						float: none;
+						display: inline-block;
+						line-height: 50px;
+						padding: 0 5px;
+						text-transform: uppercase;
+						position: relative;
+						font-size: 11px;
+						&.active .submenu {
+							z-index: 9999;
+							overflow: visible;
+						}
+					}
+				}
+				> ul:after {
+					content: ' ';
+					width: 100%;
+					display: inline-block;
+					height: 1px;
+				}
+			}
+		}
+	}
+	#frontslides .slide .slide-content {
+		top: 20px;
+		h2 {
+			font-size: 40px;
+		}
+		span {
+			font-size: 30px;
+			display: block;
+		}
+	}
+
+}
+@media only screen and (min-width : 768px) {
+	body {
+	}
+	.page {
+		max-width: 720px;
+	}
+	.head {
+		.topbar {
+			height: 50px;
+		}
+		.nav-full .navibar {
+			ul {
+				list-style: none;
+				height: 100%;
+				width: 100%;
+				text-align: justify;
+				overflow: visible;
+				li {
+					float: none;
+					display: inline-block;
+					line-height: 50px;
+					padding: 0 10px;
+					text-transform: uppercase;
+					position: relative;
+					font-size: 13px;
+					&.active .submenu {
+						z-index: 9999;
+						overflow: visible;
+					}
+				}
+			}
+			> ul:after {
+				content: ' ';
+				width: 100%;
+				display: inline-block;
+				height: 1px;
+			}
+		}
+	}
+	#frontslides {
+		.owl-nav {
+			display: none;
+		}
+		.owl-dots {
+			display: block!important;
+		}
+		.slide .slide-content {
+			top: 30px;
+			h2 {
+				font-size: 48px;
+			}
+			span {
+				font-size: 36px;
+				display: block;
+			}
+		}
+	}
+}
+@media only screen and(min-width : 992px) {
+	.page {
+		max-width: 960px;
+	}
+	.head {
+		.topbar {
+			height: 100px;
+		}
+		.nav-full .navibar ul {
+			list-style: none;
+			height: 100%;
+			width: auto;
+			z-index: 999;
+			margin-bottom: 0;
+			padding-left: 0;
+			li {
+				float: left;
+				line-height: 50px;
+				padding: 0 20px;
+				text-transform: uppercase;
+				cursor: pointer;
+				position: relative;
+				font-size: 15px;
+				&.active .submenu {
+					z-index: 999;
+					overflow: visible;
+				}
+			}
+		}
+	}
+	#frontslides .slide .slide-content {
+		top: 50px;
+		h2 {
+			font-size: 56px;
+		}
+		span {
+			font-size: 40px;
+			display: block;
+		}
+	}
+	.foot{
+		.navifoot{
+			div{
+				ul {
+					text-align:center;
+					li {
+						width: 100%;
+						display: block;
+						float:left;
+						&:after {
+							content: ' | ';
+							margin: 0 10px;
+							display:none;
+						}
+						&:last-child{
+							&:after{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and(min-width : 1400px) {
+	.page {
+		max-width: 1400px;
+	}
+}
+
+.field-validation-error {
+	color: red;
+}
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+.map {
+	max-height: 420px;
+	height: 420px;
+	//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+	border-radius: inherit;
+	margin-top: 20px;
+}
+.align-center {
+	text-align: center;
+}
+
+.row-centered {
+	text-align: center;
+}
+.col-centered {
+	display: inline-block;
+	float: none;
+	text-align: left;
+	margin-right: -4px;
+}
+.col-fixed {
+	width: 320px;
+}
+.col-min {
+	min-width: 320px;
+}
+.col-max {
+	max-width: 320px;
+}
+#article .article-content ol {
+	padding-left: 20px;
+}
+.navifoot div {
+	text-align: center;
+}
+.showcase-content .headline {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 20px;
+}

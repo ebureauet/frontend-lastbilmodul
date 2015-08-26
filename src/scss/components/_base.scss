@@ -7,7 +7,7 @@ a {
 	text-decoration: none!important;
 }
 .page {
-	width: 1600px;
+	max-width: 100%;
 	min-height: 800px;
 	margin: 0 auto;
 }
@@ -91,15 +91,15 @@ a {
 .frt {
 	float: right;
 }
-@media only screen and (min-width : 0px) {
+
+
+
+@include respond-to('handhelds'){
 	body {
-	}
-	.page {
-		max-width: 100%;
+		padding-top: $navbar-height;
 	}
 	.head {
 		.topbar {
-			height: 50px;
 			.navibar {
 			}
 			.logo {
@@ -220,11 +220,9 @@ a {
 		}
 	}
 }
-@media only screen and (min-width : 480px) {
+
+@include respond-to('handhelds-tablets'){
 	body {
-	}
-	.page {
-		max-width: 100%;
 	}
 	.head {
 		.nav-mobile {
@@ -272,17 +270,14 @@ a {
 			display: block;
 		}
 	}
-
 }
-@media only screen and (min-width : 768px) {
+
+
+@include respond-to('tablets'){
 	body {
-	}
-	.page {
-		max-width: 720px;
 	}
 	.head {
 		.topbar {
-			height: 50px;
 		}
 		.nav-full .navibar {
 			ul {
@@ -332,13 +327,11 @@ a {
 		}
 	}
 }
-@media only screen and(min-width : 992px) {
-	.page {
-		max-width: 960px;
-	}
+
+@include respond-to('desktop'){
 	.head {
 		.topbar {
-			height: 100px;
+			height: auto;
 		}
 		.nav-full .navibar ul {
 			list-style: none;
@@ -397,9 +390,16 @@ a {
 		}
 	}
 }
-@media only screen and(min-width : 1400px) {
-	.page {
-		max-width: 1400px;
+@include respond-to('large-screens'){
+	.content{
+		>.row{
+			margin:0 auto;
+			max-width: 1200px;
+			width:100%;
+			&#frontslides{
+				max-width:100%;
+			}
+		}
 	}
 }
 

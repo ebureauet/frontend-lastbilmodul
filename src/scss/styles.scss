@@ -5,6 +5,9 @@
 @import "normalize";
 @import "libs/bootstrap";
 
+//mixins
+@import "mixins/respond-to";
+
 //icon fonts
 @import "components/icons";
 

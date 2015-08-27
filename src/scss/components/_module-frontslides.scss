@@ -57,15 +57,35 @@
 				display: inline-block;
 			}
 			.owl-dot {
+				$arrowWid : 30px;
 				display: inline-block;
 				width: auto;
 				height: 50px;
 				line-height: 50px;
 				padding: 0 40px;
+				position:relative;
+				&:before{
+					content:"";
+					width: 0;
+					height: 0;
+					border-left: $arrowWid/2 solid transparent;
+					border-right: $arrowWid/2 solid transparent;
+					border-bottom: 10px solid black;
+					position:absolute;
+					left: 50%;
+					transform: translateX(-($arrowWid/2));
+					top:0px;
+					opacity:0;
+					transition: top 0.5s, opacity 0.2s;
+				}
 				&.active {
+					&:before{
+						top:-10px;
+						opacity: 1;
+					}
 				}
 				&:last-child {
-					
+
 				}
 			}
 		}

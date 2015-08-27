@@ -49,7 +49,17 @@ $(document).ready(function(){
 	});
 	*/
 
-
+	$("#detailImages").owlCarousel({
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    dots:true,
+    loop: true,
+    lazyLoad: true,
+    items: 1,
+    autoplay: true,
+		autoHeight: false,
+		mouseDrag: false
+  });
 
 	var crsl = $("#frontslides");
 	crsl.owlCarousel({

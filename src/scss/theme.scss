@@ -1,3 +1,126 @@
 .head{
   background-color : gray;
+  .navbar{
+    border-color: #F09A29;
+    border-bottom-width: 3px;
+    .top-navbar, .bottom-navbar{
+      >.container{
+        padding-left:0px;
+        padding-right:0px;
+      }
+    }
+    a{
+    }
+  }
+  .top-navbar{
+    background-color: #3F4653;
+    color:#fff;
+  }
+  .bottom-navbar{
+    background-color: #191D22;
+    color:#fff;
+    li.active{
+      a{
+        background-color: #F09A29;
+      }
+    }
+  }
+}
+
+
+#frontslides{
+  .slide{
+    .slide-content{
+      h2{
+        color: white;
+      }
+      span{
+        color: white;
+      }
+      .call-to-action{
+        background-color:white;
+      }
+    }
+    .slide-screen-effect{
+      background-color:rgba(25,29,34,0.5);
+    }
+  }
+  .owl-controls{
+    .owl-dots{
+      .owl-dot{
+        background-color: rgba(255,255,255,0.4);
+        &:before{
+          border-bottom-color: white;
+        }
+        span{
+          color: white;
+        }
+        &.active{
+          background-color: white;
+          span{
+            color: gray;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+#showcase{
+  .showcase-nav{
+    .page_link{
+      background-color: rgba(150,150,150,0.5);
+      color:white;
+      &:before{
+        border-top-color: rgba(150,150,150,1);
+      }
+      &.active_page{
+        background-color: rgba(150,150,150,1);
+        &:before{
+          opacity:1;
+          bottom:-10px;
+        }
+      }
+    }
+  }
+  .showcase-content .showcase-item {
+		.outer {
+			border-color:white;
+      border-width:1px;
+      padding:0px;
+      background-color:rgba(150,150,150,1);
+			.inner {
+			}
+		}
+	}
+}
+
+#detailImages{
+  &.owl-theme{
+    .owl-stage-outer{
+      border-color: #F09A29;
+    }
+    .owl-controls{
+      .owl-dots {
+        .owl-dot {
+          span{
+            background: #d6d6d6;
+          }
+          &.active span {
+            background:#869791;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.foot{
+  background-color:#3F4653;
+  color: #fff;
+  a{
+    color:#fff;
+  }
 }

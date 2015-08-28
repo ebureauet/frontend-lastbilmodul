@@ -1,56 +1,43 @@
 .head {
 	z-index: 100;
-	.topbar {
-		width: 100%;
-		position: relative;
-		.left {
-			float: left;
-		}
-		.right {
-			float: right;
-		}
-	}
-	.navibar {
-		height: 50px;
-		position: relative;
-		ul {
-			list-style: none;
-			height: 100%;
-			width: auto;
-			z-index: 999;
-			margin-bottom: 0;
+	.top-navbar{
+		.branding{
 			padding-left: 0;
-			li {
-				float: left;
-				line-height: 50px;
-				padding: 0 20px;
-				text-transform: uppercase;
-				cursor: pointer;
-				position: relative;
-				a {
-					text-transform: uppercase;
-				}
-				&.active {
-					.submenu {
+			padding-right: 0;
+			.logo{
+				line-height : $navbar-height;
+				margin :0;
+				padding: 0;
+				.logoimg{
+					&--regular{
+						display:inline-block;
+						vertical-align:middle;
+						height: $navbar-height - 15px;
+						width: auto;
+					}
+					&--small{
+						display:none;
+						vertical-align:middle;
+						height: $navbar-height - 10px;
+						width: auto;
 					}
 				}
-				&:hover {
-					a {
+				@include respond-to('handhelds'){
+					.logoimg{
+						&--regular{
+							display: none;
+						}
+						&--small{
+							display:inline-block;
+						}
 					}
-				}
-				.submenu {
-					display: none;
-					list-style: none;
-					position: absolute;
-					left: 0;
-					top: 50px;
-					height: auto;
-					padding-left: 0;
-					li {
-						float: left;
-					}
+
 				}
 			}
+		}
+		.menu{
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }

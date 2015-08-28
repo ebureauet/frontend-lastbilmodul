@@ -1,0 +1,51 @@
+
+
+#ads-category {
+  list-style: none;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  ul {
+    list-style: none;
+    >li {
+      border-bottom: 2px dashed #a9a9a9;
+      padding: 10px 0px;
+      font-weight: bold;
+      cursor: pointer;
+      >ul{
+        >li {
+          cursor: pointer;
+          padding: 5px 0px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  >li:hover >span,
+  >li >ul >li:hover,
+  li.selected > span,
+  li:hover span {
+    color: #f09a29;
+  }
+}
+
+#ads-container {
+  list-style: none;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  float: left;
+  li {
+    display: inline-block;
+    text-align: center;
+  }
+  .item-image {
+    background-size: cover;
+    width: 100%;
+    height: 110px;
+    background-position: center center;
+  }
+  .item-title {
+    padding-top: 5px;
+    display: block;
+  }
+}

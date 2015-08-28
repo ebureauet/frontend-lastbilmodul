@@ -1,3 +1,10 @@
+a{
+  color:#F09A29;
+  &:hover{
+    color:#DB8817;
+  }
+}
+
 .head{
   background-color : gray;
   .navbar{
@@ -99,7 +106,7 @@
 #detailImages{
   &.owl-theme{
     .owl-stage-outer{
-      border-color: #F09A29;
+      border-color: #ccc;
     }
     .owl-controls{
       .owl-dots {
@@ -122,5 +129,74 @@
   color: #fff;
   a{
     color:#fff;
+  }
+}
+
+/*-- BOOTSTRAP OVERRIDES --*/
+.navbar{
+  .navbar-nav{
+    >li{
+      >a{
+        color: #fff;
+      }
+      &:hover{
+        >a{
+          color:#F09A29;
+        }
+      }
+      &.active{
+        >a{
+          color: #fff;
+        }
+        &:hover{
+          >a{
+            background-color: #F09A29;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .dropdown{
+      >.dropdown-toggle{
+        color: #fff;
+        &:hover{
+          color:#F09A29;
+        }
+      }
+      &.open{
+        >.dropdown-toggle{
+          color: #fff;
+          background-color: #F09A29;
+        }
+      }
+    }
+  }
+}
+
+
+.dropdown-menu {
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: #F09A29;
+  border: 0px solid #CC6633;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  >li{
+    >a{
+      padding: 3px 20px;
+      color: #fff;
+      &:hover{
+        background-color:#DB8817;
+        color: #fff;
+      }
+    }
+  }
+  .divider {
+    height: 1px;
+    margin: 10px 0;
+    background-color:#DB8817;
   }
 }

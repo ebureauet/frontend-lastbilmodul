@@ -1,16 +1,6 @@
 .herobanner, .imagebanner {
 	max-height: 650px;
 	overflow:hidden;
-	&--small{
-		.slide{
-			@include respond-to('desktop'){
-				height: 350px;
-			}
-			@include respond-to('large-screens'){
-				height: 350px;
-			}
-		}
-	}
 	.slide {
 		background-repeat: no-repeat;
 		background-position: center;
@@ -62,6 +52,21 @@
 			}
 		}
 	}
+	&--small{
+		.slide{
+			@include respond-to('desktop'){
+				height: 350px;
+			}
+			@include respond-to('large-screens'){
+				height: 350px;
+			}
+		}
+	}
+}
+
+
+
+.herobanner{
 	.owl-controls {
 		position: absolute;
 		bottom: 0;

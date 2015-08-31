@@ -61,7 +61,7 @@ $(document).ready(function(){
 		mouseDrag: false
   });
 
-	var crsl = $("#frontslides");
+	var crsl = $(".herobanner");
 	crsl.owlCarousel({
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
@@ -97,17 +97,51 @@ $(document).ready(function(){
     		}
 		}
     });
+});
 
+$(function () {
+  var wall = new freewall("#ads-container");
 
+  wall.reset({
+    selector: '.element-item',
+    animate: true,
+    cellW: 200,
+    cellH: 200,
+    fixSize: 0,
+    onResize: function () {
+        wall.refresh();
+    },
+    gutterX: 0,
+    gutterY: 0
 
+  });
 
+  wall.filter("*");
 
+  var adsCategory = $("#ads-category > li");
 
+  adsCategory.on("click", function (evt) {
+    var selectedClass = "selected";
+		$("#ads-category > li").removeClass(selectedClass);
+    $(this).toggleClass(selectedClass);
 
+    var filter = $(this).data('filter');
+    wall.filter(filter);
 
+  });
 
+	//added adssubcategory event listener so that stop propagation won't reach accordion bootstrap event
+	var adsSubCategory = $("#ads-category > li > ul");
+	adsSubCategory.on("click", "li", function (evt) {
+		var selectedClass = "selected";
+		$("#ads-category > li > ul > li").removeClass(selectedClass);
+		$(this).toggleClass(selectedClass);
 
+		var filter = $(this).data('filter');
+    wall.filter(filter);
+		evt.stopPropagation();
+    evt.preventDefault();
+	});
 
-
-
+  wall.fitWidth();
 });

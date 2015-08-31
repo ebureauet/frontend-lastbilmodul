@@ -1,5 +1,9 @@
+$colPrimary : #F09A29;
+$colSecondary : #3F4653;
+$colExtra: #191D22;
+
 a{
-  color:#F09A29;
+  color:$colPrimary;
   &:hover{
     color:#DB8817;
   }
@@ -8,7 +12,7 @@ a{
 .head{
   background-color : gray;
   .navbar{
-    border-color: #F09A29;
+    border-color: $colPrimary;
     border-bottom-width: 3px;
     .top-navbar, .bottom-navbar{
       >.container{
@@ -20,22 +24,22 @@ a{
     }
   }
   .top-navbar{
-    background-color: #3F4653;
+    background-color: $colSecondary;
     color:#fff;
   }
   .bottom-navbar{
-    background-color: #191D22;
+    background-color: $colExtra;
     color:#fff;
     li.active{
       a{
-        background-color: #F09A29;
+        background-color: $colPrimary;
       }
     }
   }
 }
 
 
-#frontslides{
+.herobanner{
   .slide{
     .slide-content{
       h2{
@@ -125,7 +129,7 @@ a{
 
 
 .foot{
-  background-color:#3F4653;
+  background-color:$colSecondary;
   color: #fff;
   a{
     color:#fff;
@@ -141,7 +145,7 @@ a{
       }
       &:hover{
         >a{
-          color:#F09A29;
+          color:$colPrimary;
         }
       }
       &.active{
@@ -150,7 +154,7 @@ a{
         }
         &:hover{
           >a{
-            background-color: #F09A29;
+            background-color: $colPrimary;
             color: #fff;
           }
         }
@@ -160,13 +164,13 @@ a{
       >.dropdown-toggle{
         color: #fff;
         &:hover{
-          color:#F09A29;
+          color:$colPrimary;
         }
       }
       &.open{
         >.dropdown-toggle{
           color: #fff;
-          background-color: #F09A29;
+          background-color: $colPrimary;
         }
       }
     }
@@ -178,7 +182,7 @@ a{
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  background-color: #F09A29;
+  background-color: $colPrimary;
   border: 0px solid #CC6633;
   border-radius: 0px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);

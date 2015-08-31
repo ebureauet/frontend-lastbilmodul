@@ -20,11 +20,12 @@ a {
 
 @import 'head';
 
-@import 'module-frontslides';
+@import 'module-herobanner';
 @import 'module-showcase';
 @import 'module-subslideshow';
 @import 'module-adscategory';
 @import 'module-gmap';
+@import 'module-categoryoverview';
 
 #article{
 
@@ -32,6 +33,9 @@ a {
 
 .article-content {
 	padding: 0px 30px 30px;
+	@include respond-to('handhelds'){
+		padding: 0px 15px 15px;
+	}
 	ul {
 		padding-left: 20px;
 	}

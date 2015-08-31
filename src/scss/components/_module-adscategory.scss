@@ -1,5 +1,5 @@
 
-
+/*
 #ads-category {
   list-style: none;
   text-transform: uppercase;
@@ -49,3 +49,86 @@
     display: block;
   }
 }
+*/
+
+#ads-category ul {
+       list-style: none;
+
+   }
+
+   #ads-category {
+       list-style: none;
+       text-transform: uppercase;
+       margin-bottom: 50px;
+       margin:20px 0;
+   }
+
+
+
+   #ads-category > li {
+       border-bottom: 2px dashed #a9a9a9;
+
+       font-weight: bold;
+       cursor: pointer;
+   }
+    #ads-category > li > ul{
+      padding:5px 0 10px;
+    }
+    #ads-category > li:first-child > ul{
+      padding:0px;
+    }
+   #ads-category > li > ul > li {
+       cursor: pointer;
+
+       font-weight: normal;
+   }
+  #ads-category > li > span{
+    color: inherit;
+    display: block;
+    padding: 10px 0px;
+  }
+   #ads-category > li:hover > span,
+   #ads-category > li > ul > li:hover,
+   #ads-category li.selected > span,
+   #ads-container li:hover span {
+       color: #f09a29;
+   }
+
+   #ads-category > li > ul > li{
+     &.selected{
+       font-weight:bold;
+     }
+     span{
+       padding: 5px 0px;
+       display:block;
+     }
+   }
+
+
+
+   #ads-container {
+       list-style: none;
+       width: 100%;
+       margin-right: 0px;
+       margin-left: 0px;
+       float: left;
+       margin:20px 0;
+   }
+
+   #ads-container li {
+       display: inline-block;
+       text-align: center;
+   }
+
+
+   .item-image {
+       background-size: cover;
+       width: 100%;
+       height: 110px;
+       background-position: center center;
+   }
+
+   #ads-container .item-title {
+       padding-top: 5px;
+       display: block;
+   }

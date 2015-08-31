@@ -1,8 +1,32 @@
-#frontslides {
+.herobanner, .imagebanner {
+	max-height: 650px;
+	overflow:hidden;
+	&--small{
+		.slide{
+			@include respond-to('desktop'){
+				height: 350px;
+			}
+			@include respond-to('large-screens'){
+				height: 350px;
+			}
+		}
+	}
 	.slide {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		@include respond-to('handhelds'){
+			height: 250px;
+		}
+		@include respond-to('tablets'){
+			height: 350px;
+		}
+		@include respond-to('desktop'){
+			height: 425px;
+		}
+		@include respond-to('large-screens'){
+			height: 500px;
+		}
 		.slide-image {
 			visibility: hidden;
 		}

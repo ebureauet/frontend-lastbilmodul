@@ -1,0 +1,30 @@
+@@include('../general/document-top.html',{
+	"title" : "Categories"
+})
+<body>
+	<!-- PAGE BEGIN -->
+	<div class="page">
+		@@include("../general/page-header.html")
+
+		<div class="content container-fluid">
+      @@include("../components/_imagebanner.html")
+			<div id="article" class="row ribbon ribbon--center">
+
+				<div class="article-content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+          @@include('../components/_categoryoverview.html')
+        </div> <!---- Article Content --->
+      </div>
+
+    </div>
+
+    @@include("../general/page-footer.html")
+
+  </div>
+  <!-- /PAGE END -->
+
+  @@include("../general/imports-deps.html",{
+    "addScripts":""
+  })
+
+@@include('../general/document-bottom.html')

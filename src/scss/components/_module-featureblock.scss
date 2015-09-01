@@ -58,10 +58,10 @@
 	&--small{
 		.slide{
 			@include respond-to('desktop'){
-				height: 350px;
+				height: 300px;
 			}
 			@include respond-to('large-screens'){
-				height: 350px;
+				height: 300px;
 			}
 		}
 	}

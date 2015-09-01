@@ -49,7 +49,14 @@ a{
         color: white;
       }
       .call-to-action{
-        background-color:white;
+        border: 2px solid white;
+        background-color:transparent;
+        color: white;
+        transition: background-color 0.3s;
+        &:hover{
+          color:$colPrimary;
+          background-color: white;
+        }
       }
     }
     .slide-screen-effect{

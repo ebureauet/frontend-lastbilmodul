@@ -13,7 +13,7 @@
 
 					<!---- Article Content --->
 			</div>
-
+			@@include("../components/_featureblock.html")
 		</div>
 
 		@@include("../general/page-footer.html")
@@ -21,6 +21,8 @@
 	</div>
 	<!-- /PAGE END -->
 
-	@@include("../general/imports-deps.html")
+	@@include("../general/imports-deps.html",{
+		"addedScripts":""
+	})
 
 @@include('../general/document-bottom.html')

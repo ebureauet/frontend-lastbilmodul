@@ -1,0 +1,218 @@
+
+body{
+  background-color: $pageColor;
+  color: contrastColor($pageColor, $fontColDark, $fontColLight);
+}
+
+a{
+  color:$colPrimary;
+  &:hover{
+    color:darken($colPrimary, 10%);
+  }
+}
+
+.head{
+  background-color : gray;
+  .navbar{
+    border-color: $colPrimary;
+    border-bottom-width: 3px;
+    .top-navbar, .bottom-navbar{
+      >.container{
+        padding-left:0px;
+        padding-right:0px;
+      }
+    }
+    a{
+    }
+  }
+  .top-navbar{
+    background-color: $colSecondary;
+    color:$fontColLight;
+  }
+  .bottom-navbar{
+    background-color: $colExtra;
+    color:$fontColLight;
+    li.active{
+      a{
+        background-color: $colPrimary;
+      }
+    }
+  }
+}
+
+
+.herobanner{
+  .slide{
+    .slide-content{
+      h2{
+        color: white;
+      }
+      span{
+        color: white;
+      }
+      .call-to-action{
+        border: 2px solid $fontColLight;
+        background-color:transparent;
+        color: $fontColLight;
+        transition: background-color 0.3s;
+        &:hover{
+          color:$colPrimary;
+          background-color: white;
+        }
+      }
+    }
+    .slide-screen-effect{
+      background-color:rgba(25,29,34,0.5);
+    }
+  }
+  .owl-controls{
+    .owl-dots{
+      .owl-dot{
+        background-color: rgba($colSecondary,0.4);
+        &:before{
+          border-bottom-color: rgba($colSecondary,0.4);
+        }
+        span{
+          color: $fontColLight;
+        }
+        &.active{
+          background-color: rgba(white,1);
+          &:before{
+            border-bottom-color: rgba(white,1);
+          }
+          span{
+            //background-color: rgba($colSecondary,1);
+            color:$colSecondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+#showcase{
+  .showcase-nav{
+    .page_link{
+      background-color: rgba($colSecondary,0.3);
+      color:white;
+      &:before{
+        border-top-color: rgba($colSecondary,0.8);
+      }
+      &.active_page{
+        background-color: rgba($colSecondary,0.8);
+        &:before{
+          opacity:1;
+          bottom:-10px;
+        }
+      }
+    }
+  }
+  .showcase-content .showcase-item {
+		.outer {
+			border-color:white;
+      border-width:1px;
+      padding:0px;
+      background-color:rgba(150,150,150,1);
+			.inner {
+			}
+		}
+	}
+}
+
+#detailImages{
+  &.owl-theme{
+    .owl-stage-outer{
+      border-color: rgba($colSecondary,0.4);
+    }
+    .owl-controls{
+      .owl-dots {
+        .owl-dot {
+          span{
+            background: rgba($colSecondary,0.4);
+          }
+          &.active span {
+            background:rgba($colSecondary,0.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.foot{
+  background-color:$colSecondary;
+  color: contrastColor($colSecondary, $fontColDark, $fontColLight);
+  a{
+    color: contrastColor($colSecondary, $fontColDark, $fontColLight);
+  }
+}
+
+/*-- BOOTSTRAP OVERRIDES --*/
+.navbar{
+  .navbar-nav{
+    >li{
+      >a{
+        color: $fontColLight;
+      }
+      &:hover{
+        >a{
+          color:$colPrimary;
+        }
+      }
+      &.active{
+        >a{
+          color: $fontColLight;
+        }
+        &:hover{
+          >a{
+            background-color: $colPrimary;
+            color: $fontColLight;
+          }
+        }
+      }
+    }
+    .dropdown{
+      >.dropdown-toggle{
+        color: $fontColLight;
+        &:hover{
+          color:$colPrimary;
+        }
+      }
+      &.open{
+        >.dropdown-toggle{
+          color: $fontColLight;
+          background-color: $colPrimary;
+        }
+      }
+    }
+  }
+}
+
+
+.dropdown-menu {
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: $colPrimary;
+  border: 0px solid darken($colPrimary,10%);
+  border-radius: 0px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  >li{
+    >a{
+      padding: 3px 20px;
+      color: $fontColLight;
+      &:hover{
+        background-color:darken($colPrimary,10%);
+        color: $fontColLight;
+      }
+    }
+  }
+  .divider {
+    height: 1px;
+    margin: 10px 0;
+    background-color:darken($colPrimary,10%);
+  }
+}

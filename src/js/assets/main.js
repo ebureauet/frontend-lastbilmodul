@@ -49,6 +49,8 @@ $(document).ready(function(){
 	});
 	*/
 
+
+
 	$("#detailImages").owlCarousel({
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',

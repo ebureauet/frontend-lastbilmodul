@@ -1,4 +1,5 @@
 require('../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
+require('./libs/bootstrap-hover-dropdown.js');
 require('./libs/owl.carousel.min.js');
 require('./libs/jquery.fancybox.js');
 require('./libs/jquery.fancybox-buttons.js');

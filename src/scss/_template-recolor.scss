@@ -14,6 +14,11 @@ a{
   }
 }
 
+#article{
+  background-color: $pageColor;
+  color: contrastColor($pageColor, $fontColDark, $fontColLight);
+}
+
 .head{
   background-color : gray;
   .navbar{
@@ -113,6 +118,7 @@ a{
   .showcase-nav{
     .page_link{
       background-color: rgba($colSecondary,0.3);
+      border-color: rgba($colSecondary,0.5);
       color:white;
       &:before{
         border-top-color: rgba($colSecondary,0.8);
@@ -130,12 +136,12 @@ a{
   .showcase-content .showcase-item {
 		.outer {
 			border-color:white;
-      border-width:1px;
+
       padding:0px;
       margin-bottom:5px;
       //background-color:rgba(150,150,150,1);
 			.inner {
-
+        border-width:1px;
 			}
       .item-title{
         text-align:center;
@@ -259,6 +265,7 @@ a{
     .top-navbar{
       .container{
         width: $containerWidth;
+        max-width:100%;
       }
       .branding{
         height: $headBrandHeight;
@@ -275,6 +282,10 @@ a{
     .bottom-navbar{
       .container{
         width: $containerWidth;
+        max-width:100%;
+        .navbar-right{
+          margin-right:0px;
+        }
       }
     }
   }

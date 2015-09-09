@@ -27,7 +27,7 @@ a {
 
 
 .article-content {
-	padding: 0px 30px 30px;
+	padding: 0px 15px 15px;
 	@include respond-to('handhelds'){
 		padding: 0px 15px 15px;
 	}
@@ -36,7 +36,7 @@ a {
 	}
 }
 .sidebar {
-	padding: 5px 20px 20px;
+	padding: 5px 15px 15px;
 	textarea {
 		resize: none;
 	}

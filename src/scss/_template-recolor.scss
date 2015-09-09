@@ -1,4 +1,7 @@
 
+@import 'libs/bootstrap-variables';
+@import 'mixins/respond-to';
+
 body{
   background-color: $pageColor;
   color: contrastColor($pageColor, $fontColDark, $fontColLight);
@@ -16,6 +19,16 @@ a{
   .navbar{
     border-color: $colPrimary;
     border-bottom-width: 3px;
+    .navbar-toggle{
+      border:none;
+      color: $colPrimary;
+      font-size: 1.2em;
+      border-radius:0;
+      background-color: $colExtra;
+      &.collapsed{
+        background-color: transparent;
+      }
+    }
     .top-navbar, .bottom-navbar{
       >.container{
         padding-left:0px;
@@ -28,10 +41,16 @@ a{
   .top-navbar{
     background-color: $colSecondary;
     color:$fontColLight;
+    .branding{
+
+    }
   }
   .bottom-navbar{
     background-color: $colExtra;
     color:$fontColLight;
+    .navbar-collapse{
+      border-top-width: 0px;
+    }
     li.active{
       a{
         background-color: $colPrimary;
@@ -51,7 +70,7 @@ a{
         color: white;
       }
       .call-to-action{
-        border: 2px solid $fontColLight;
+        border: 1px solid $fontColLight;
         background-color:transparent;
         color: $fontColLight;
         transition: background-color 0.3s;
@@ -100,9 +119,10 @@ a{
       }
       &.active_page{
         background-color: rgba($colSecondary,0.8);
+        border-color:transparent;
         &:before{
           opacity:1;
-          bottom:-10px;
+          bottom:-11px;
         }
       }
     }
@@ -112,9 +132,15 @@ a{
 			border-color:white;
       border-width:1px;
       padding:0px;
-      background-color:rgba(150,150,150,1);
+      margin-bottom:5px;
+      //background-color:rgba(150,150,150,1);
 			.inner {
+
 			}
+      .item-title{
+        text-align:center;
+        display:block;
+      }
 		}
 	}
 }
@@ -123,6 +149,7 @@ a{
   &.owl-theme{
     .owl-stage-outer{
       border-color: rgba($colSecondary,0.4);
+      border-width:0;
     }
     .owl-controls{
       .owl-dots {
@@ -215,4 +242,62 @@ a{
     margin: 10px 0;
     background-color:darken($colPrimary,10%);
   }
+}
+
+
+//layout responsive overrides
+@include respond-to('handhelds'){
+	body {
+		padding-top: $navbar-height;
+	}
+}
+@include respond-to('tablets-desktop'){
+	body {
+		padding-top: $navbar-height + $headBrandHeight;
+	}
+  .head{
+    .top-navbar{
+      .container{
+        width: $containerWidth;
+      }
+      .branding{
+        height: $headBrandHeight;
+        .logo{
+          line-height: $headBrandHeight;
+          .logoimg{
+            &--regular{
+              height:100%;
+            }
+          }
+        }
+      }
+    }
+    .bottom-navbar{
+      .container{
+        width: $containerWidth;
+      }
+    }
+  }
+}
+
+
+
+//RIBBON LAYOUT
+
+.ribbon{
+	//padding: 20px 0px;
+	&--fill{
+		//padding: 0px 0px;
+	}
+	&--center{
+		//padding: 20px 0px;
+	}
+	@include respond-to('large-screens'){
+		&--fill{
+			//max-width: 100%;
+		}
+		&--center{
+			max-width: $containerWidth;
+		}
+	}
 }

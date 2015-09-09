@@ -6,6 +6,9 @@ $fontColLight: #fff;
 $fontColDark: #333;
 $pageColor: #fff;
 
+$headBrandHeight: 80px;
+$containerWidth: 1000px;
+
 
 @function contrastColor($col1,$coldark,$collight){
   @if (lightness($col1) > 50%){

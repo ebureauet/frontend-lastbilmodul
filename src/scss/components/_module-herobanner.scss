@@ -92,10 +92,15 @@
 				$arrowWid : 30px;
 				display: inline-block;
 				width: auto;
-				height: 50px;
-				line-height: 50px;
+				height: 40px;
+				line-height: 40px;
 				padding: 0 40px;
 				position:relative;
+				border: 1px solid rgba(#fff,0.5);
+				border-right-width: 0;
+				&:last-child{
+					border-right-width: 1px;
+				}
 				&:before{
 					content:"";
 					width: 0;

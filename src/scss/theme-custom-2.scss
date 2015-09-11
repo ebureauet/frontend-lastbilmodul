@@ -1,0 +1,27 @@
+
+$colPrimary : #2C2B5B;
+$colSecondary : #6B778D;
+$colExtra: #747F93;
+
+$fontColLight: #fff;
+$fontColDark: #333;
+$pageColor: lighten($colSecondary,30%);
+
+$headBrandHeight: 80px;
+$containerWidth: 900px;
+
+$slideScreenColor: #2C2B5B;
+
+$headBorderWidth: 7px;
+
+
+@function contrastColor($col1,$coldark,$collight){
+  @if (lightness($col1) > 50%){
+    @return $coldark;
+  }
+  @else{
+    @return $collight;
+  }
+}
+
+@import 'template-recolor';

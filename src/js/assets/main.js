@@ -1,55 +1,4 @@
 $(document).ready(function(){
-	/*
-	var menuItemsNum = ($('.navibar ul.menu > li').length);
-
-	$('.topbar').addClass('nav-full').clone().addClass('nav-mobile').removeClass('nav-full').appendTo( ".head" );
-
-	$('.nav-full ul.menu').addClass('itemsnum-'+menuItemsNum);
-
-	$(".nav-mobile .navibar ul li:not('.drpdwn')").on('click',function(){
-		if (btnlogin.hasClass('active')){
-			btnlogin.removeClass('active');
-		}
-	});
-
-	$('.nav-mobile').stick_in_parent({
-		parent : 'body'
-	});
-
-
-	var btnlogin;
-	btnlogin = $(".nav-mobile .navibar .menu-button").parent().parent();
-	$('.nav-mobile .navibar .menu-button').on('click',function(){
-		$(this).parent().parent().toggleClass('active');
-	});
-	$(".page").on('click',function(e){
-		btnlogin.removeClass('active');
-	});
-	btnlogin.click(function(e){
-		e.stopPropagation();
-	});
-
-
-	$(".page").on('click',function(e){
-		$('.navibar ul li').removeClass('active');
-		$('.submenu').fadeOut('fast');
-	});
-
-	$('.navibar ul').on('click','li',function(e){
-		if ($(this).find('.submenu').length){
-			if ($(this).hasClass('active')){
-				$(this).removeClass('active').find('.submenu').fadeOut('fast');
-			}else{
-				$('.navibar ul li').removeClass('active').find('.submenu').fadeOut('fast');
-				//$(this).parent().find('li').removeClass('active');
-				$(this).addClass('active').find('.submenu').fadeIn('fast');
-			}
-		}
-		e.stopPropagation();
-	});
-	*/
-
-
 
 	$("#detailImages").owlCarousel({
     animateOut: 'fadeOut',
@@ -93,6 +42,8 @@ $(document).ready(function(){
 	});
 
 	$('.popshow').fancybox({
+		openEffect	: 'elastic',
+		closeEffect	: 'elastic',
     	helpers : {
     		title : {
     			type : 'inside'
@@ -100,6 +51,37 @@ $(document).ready(function(){
 		}
     });
 });
+
+
+function lazyLoadImage(el) {
+    if (typeof el === "undefined" || el === null)
+        return;
+
+    var src = el.getAttribute('data-src');
+    if (src) {
+        if (el.tagName === "IMG")
+            el.setAttribute('src', src);
+        else {
+            $(el).css("background-image", "url('" + src + "')");
+        }
+
+        el.removeAttribute('data-src');
+    }
+}
+
+
+$(window).bind("load", function() {
+    $(".lazy").each(function() {
+        lazyLoadImage(this);
+    });
+
+
+});
+
+$(document).ready(function() {
+    $("#ads-container").fadeIn();
+});
+
 
 $(function () {
   var wall = new freewall("#ads-container");
@@ -146,4 +128,7 @@ $(function () {
 	});
 
   wall.fitWidth();
+
+
+
 });

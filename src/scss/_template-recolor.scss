@@ -8,9 +8,9 @@ body{
 }
 
 a{
-  color:$colPrimary;
+  color:contrastColor($pageColor, darken($colPrimary, 20%),  lighten($colPrimary, 30%));
   &:hover{
-    color:darken($colPrimary, 10%);
+    color:contrastColor($pageColor, darken($colPrimary, 30%),  lighten($colPrimary, 20%));
   }
 }
 
@@ -23,7 +23,7 @@ a{
   background-color : gray;
   .navbar{
     border-color: $colPrimary;
-    border-bottom-width: 3px;
+    border-bottom-width: $headBorderWidth;
     .navbar-toggle{
       border:none;
       color: $colPrimary;
@@ -86,7 +86,7 @@ a{
       }
     }
     .slide-screen-effect{
-      background-color:rgba(25,29,34,0.5);
+      background-color:rgba($slideScreenColor,0.4);
     }
   }
   .owl-controls{
@@ -116,15 +116,16 @@ a{
 
 #showcase{
   .showcase-nav{
+    $col1 : contrastColor($pageColor, darken($colSecondary,20%), lighten($fontColLight,20%));
     .page_link{
-      background-color: rgba($colSecondary,0.3);
-      border-color: rgba($colSecondary,0.5);
+      background-color: rgba($col1,0.3);
+      border-color: rgba($col1,0.5);
       color:white;
       &:before{
-        border-top-color: rgba($colSecondary,0.8);
+        border-top-color: rgba($col1,0.8);
       }
       &.active_page{
-        background-color: rgba($colSecondary,0.8);
+        background-color: rgba($col1,0.8);
         border-color:transparent;
         &:before{
           opacity:1;
@@ -164,7 +165,7 @@ a{
             background: rgba($colSecondary,0.4);
           }
           &.active span {
-            background:rgba($colSecondary,0.4);
+            background:rgba($colSecondary,1);
           }
         }
       }
@@ -172,6 +173,39 @@ a{
   }
 }
 
+#ads-category {
+  > li > span:hover,
+  li.selected > span,
+  {
+     color: $colPrimary;
+  }
+  > li > ul > li:hover
+  {
+    color: lighten($colPrimary,20);
+ }
+}
+
+#ads-container {
+  .item-title{
+    strong{
+      color: $colPrimary;
+    }
+    &:hover{
+      strong{
+        color: lighten($colPrimary,20);
+      }
+    }
+  }
+}
+
+
+.category-overview{
+  padding:10px 0;
+  .category{
+    padding:10px 0;
+    background-color:rgba($colPrimary,0.2);
+  }
+}
 
 .foot{
   background-color:$colSecondary;
@@ -186,7 +220,7 @@ a{
   .navbar-nav{
     >li{
       >a{
-        color: $fontColLight;
+        color: contrastColor($colSecondary, $colPrimary, $fontColLight);
       }
       &:hover{
         >a{
@@ -207,7 +241,7 @@ a{
     }
     .dropdown{
       >.dropdown-toggle{
-        color: $fontColLight;
+        color: contrastColor($colSecondary, $colPrimary, $fontColLight);
         &:hover{
           color:$colPrimary;
         }

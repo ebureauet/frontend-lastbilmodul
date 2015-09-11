@@ -1,0 +1,39 @@
+
+$colPrimary : #F57E2C;
+$colSecondary : #E9C3A1;
+$colExtra: #FFF7F0;
+
+$fontColLight: #fff;
+$fontColDark: #333;
+$pageColor: #FFF;
+
+$headBrandHeight: 80px;
+$containerWidth: 900px;
+
+$slideScreenColor: #E9C3A1;
+
+$headBorderWidth: 7px;
+
+/*
+$colPrimary : #CB541B;
+$colSecondary :#843E2D;
+$colExtra: #F57E2C;
+
+$fontColLight: #ccc;
+$fontColDark: #333;
+$pageColor: #433132;
+
+$headBrandHeight: 80px;
+$containerWidth: 1000px;
+*/
+
+@function contrastColor($col1,$coldark,$collight){
+  @if (lightness($col1) > 50%){
+    @return $coldark;
+  }
+  @else{
+    @return $collight;
+  }
+}
+
+@import 'template-recolor';

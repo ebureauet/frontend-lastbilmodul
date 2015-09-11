@@ -6,6 +6,9 @@
   margin: 20px 0;
   padding-left:0px;
   > li {
+    &.panel{
+      background-color: transparent;
+    }
     border-bottom: 2px dashed #a9a9a9;
     font-weight: bold;
     cursor: pointer;

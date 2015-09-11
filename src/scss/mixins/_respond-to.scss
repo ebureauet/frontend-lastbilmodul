@@ -1,4 +1,9 @@
+//this mixin has a dependency on bootstrap variables
+
 @mixin respond-to($media) {
+  @if $media == very-small {
+    @media only screen and (max-width: $screen-xs - 1) { @content; }
+  }
   @if $media == handhelds {
     @media only screen and (max-width: $screen-sm - 1) { @content; }
   }

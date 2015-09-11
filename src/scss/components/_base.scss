@@ -10,6 +10,7 @@ a {
 	max-width: 100%;
 	min-height: 800px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .content {
@@ -36,7 +37,7 @@ a {
 	&--wide{
 		@extend .col-md-12;
 	}
-	padding: 0px 15px 15px;
+	padding: 20px 15px 15px;
 	@include respond-to('handhelds'){
 		padding: 0px 15px 15px;
 	}
@@ -44,9 +45,7 @@ a {
 		padding-left: 20px;
 	}
 	>img{
-		&.flt{
-			padding-right: 10px;
-		}
+		@extend .img-responsive;
 		@include respond-to('tablets-desktop'){
 			max-width:300px;
 		}
@@ -55,7 +54,7 @@ a {
 .sidebar {
 	@extend .col-xs-12;
 	@extend .col-md-4;
-	padding: 5px 15px 15px;
+	padding: 10px 15px 15px;
 	textarea {
 		resize: none;
 	}
@@ -78,11 +77,15 @@ a {
 	margin-left: 0;
 	margin-right: 0;
 }
-.flt {
+.img-flt {
 	float: left;
+	padding-right: 10px;
+	padding-bottom: 5px;
 }
-.frt {
+.img-frt {
 	float: right;
+	padding-left: 10px;
+	padding-bottom: 5px;
 }
 
 
@@ -180,11 +183,7 @@ a {
 		}
 		.slide .slide-content {
 			top: 10px;
-			h2 {
-				font-size: 32px;
-			}
 			span {
-				font-size: 24px;
 				display: block;
 			}
 		}
@@ -217,49 +216,9 @@ a {
 @include respond-to('handhelds-tablets'){
 	body {
 	}
-	.head {
-		.nav-mobile {
-			display: none!important;
-		}
-		.nav-full {
-			display: block!important;
-			.navibar {
-				ul {
-					list-style: none;
-					height: 100%;
-					width: 100%;
-					text-align: justify;
-					overflow: visible;
-					li {
-						float: none;
-						display: inline-block;
-						line-height: 50px;
-						padding: 0 5px;
-						text-transform: uppercase;
-						position: relative;
-						font-size: 11px;
-						&.active .submenu {
-							z-index: 9999;
-							overflow: visible;
-						}
-					}
-				}
-				> ul:after {
-					content: ' ';
-					width: 100%;
-					display: inline-block;
-					height: 1px;
-				}
-			}
-		}
-	}
 	#frontslides .slide .slide-content {
 		top: 20px;
-		h2 {
-			font-size: 40px;
-		}
 		span {
-			font-size: 30px;
 			display: block;
 		}
 	}
@@ -311,11 +270,7 @@ a {
 		}
 		.slide .slide-content {
 			top: 30px;
-			h2 {
-				font-size: 48px;
-			}
 			span {
-				font-size: 36px;
 				display: block;
 			}
 		}
@@ -354,11 +309,7 @@ a {
 	}
 	#frontslides .slide .slide-content {
 		top: 50px;
-		h2 {
-			font-size: 56px;
-		}
 		span {
-			font-size: 40px;
 			display: block;
 		}
 	}
@@ -451,12 +402,12 @@ a {
 //RIBBON LAYOUT
 
 .ribbon{
-	padding: 20px 0px;
+
 	&--fill{
-		padding: 0px 0px;
+
 	}
 	&--center{
-		padding: 20px 0px;
+
 	}
 	@include respond-to('large-screens'){
 		&--fill{

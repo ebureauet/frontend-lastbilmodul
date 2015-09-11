@@ -296,13 +296,6 @@ a{
 //RIBBON LAYOUT
 
 .ribbon{
-	//padding: 20px 0px;
-	&--fill{
-		//padding: 0px 0px;
-	}
-	&--center{
-		//padding: 20px 0px;
-	}
 	@include respond-to('large-screens'){
 		&--fill{
 			//max-width: 100%;

@@ -1,24 +1,24 @@
 
-$colPrimary : #2C2B5B;
-$colSecondary : #6B778D;
-$colExtra: #747F93;
+$colPrimary : #A6D3F2;
+$colSecondary : #1368AB;
+$colExtra: #3498DB;
 
 $fontColLight: #fff;
 $fontColDark: #333;
-$pageColor: lighten($colSecondary,30%);
+$pageColor: #fff;
 
 $headBrandHeight: 80px;
 $containerWidth: 900px;
 
 $slideScreenColor: #2C2B5B;
 
-$headBorderWidth: 7px;
+$headBorderWidth: 0px;
 
-$headMenuTopBorderWidth: 0px;
+$headMenuTopBorderWidth: 1px;
 
-$ShowcaseTabColorBase: $colSecondary;
+$ShowcaseTabColorBase: $colExtra;
 
-$footLinesBackColor: inherit;
+$footLinesBackColor: #3498DB;
 
 @function contrastColor($col1,$coldark,$collight){
   @if (lightness($col1) > 50%){

@@ -53,6 +53,7 @@ a{
   .bottom-navbar{
     background-color: $colExtra;
     color:$fontColLight;
+    border-top: $headMenuTopBorderWidth solid $colPrimary;
     .navbar-collapse{
       border-top-width: 0px;
     }
@@ -116,7 +117,7 @@ a{
 
 #showcase{
   .showcase-nav{
-    $col1 : contrastColor($pageColor, darken($colSecondary,20%), lighten($fontColLight,20%));
+    $col1 : contrastColor($pageColor, darken($ShowcaseTabColorBase,20%), lighten($ShowcaseTabColorBase,20%));
     .page_link{
       background-color: rgba($col1,0.3);
       border-color: rgba($col1,0.5);
@@ -181,7 +182,7 @@ a{
   }
   > li > ul > li:hover
   {
-    color: lighten($colPrimary,20);
+    color: lighten($colPrimary,20%);
  }
 }
 
@@ -192,7 +193,7 @@ a{
     }
     &:hover{
       strong{
-        color: lighten($colPrimary,20);
+        color: darken($colPrimary,10%);
       }
     }
   }
@@ -212,6 +213,9 @@ a{
   color: contrastColor($colSecondary, $fontColDark, $fontColLight);
   a{
     color: contrastColor($colSecondary, $fontColDark, $fontColLight);
+  }
+  .footlines{
+    background-color:$footLinesBackColor;
   }
 }
 

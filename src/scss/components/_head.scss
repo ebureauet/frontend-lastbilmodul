@@ -5,22 +5,16 @@
 			padding-left: 0;
 			padding-right: 0;
 			.logo{
-				line-height : $navbar-height;
 				margin :0;
 				padding: 0;
 				.logoimg{
 					&--regular{
 						display:inline-block;
 						vertical-align:middle;
-						height: $navbar-height - 15px;
-						width: auto;
 					}
 					&--small{
 						display:none;
-						padding: 0 10px;
 						vertical-align:middle;
-						height: $navbar-height - 10px;
-						width: auto;
 					}
 				}
 				@include respond-to('handhelds'){
@@ -32,7 +26,6 @@
 							display:inline-block;
 						}
 					}
-
 				}
 			}
 		}

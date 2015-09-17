@@ -47,7 +47,20 @@ a{
     background-color: $colSecondary;
     color:$fontColLight;
     .branding{
-
+      .logo{
+				line-height : $headBrandHeight;
+				.logoimg{
+					&--regular{
+            height: $headBrandLogoHeight;
+						width: auto;
+					}
+					&--small{
+            padding: 0 10px;
+						height: $navbar-height - 10px;
+						width: auto;
+					}
+				}
+			}
     }
   }
   .bottom-navbar{
@@ -294,6 +307,15 @@ a{
 	body {
 		padding-top: $navbar-height;
 	}
+  .head{
+    .top-navbar{
+      .branding{
+        .logo{
+          line-height: $navbar-height;
+        }
+      }
+    }
+  }
 }
 @include respond-to('tablets-desktop'){
 	body {
@@ -307,14 +329,6 @@ a{
       }
       .branding{
         height: $headBrandHeight;
-        .logo{
-          line-height: $headBrandHeight;
-          .logoimg{
-            &--regular{
-              height:100%;
-            }
-          }
-        }
       }
     }
     .bottom-navbar{

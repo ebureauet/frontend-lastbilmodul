@@ -28,6 +28,22 @@ a{
   .top-navbar{
     background-color: $colSecondary;
     color:$fontColLight;
+    .branding{
+      .logo{
+				line-height : $headBrandLogoHeight;
+				.logoimg{
+					&--regular{
+            height: $headBrandLogoHeight;
+						width: auto;
+					}
+					&--small{
+            padding: 0 10px;
+						height: $navbar-height - 10px;
+						width: auto;
+					}
+				}
+			}
+    }
   }
   .bottom-navbar{
     background-color: $colExtra;

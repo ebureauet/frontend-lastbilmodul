@@ -1,0 +1,34 @@
+
+$colPrimary : #cdcdcd;
+$colSecondary : #b3b3b3;
+$colExtra: #7e7e7e;
+
+$fontColLight: #fff;
+$fontColDark: #444;
+$pageColor: #eee;
+
+$headBrandHeight: 90px;
+$headBrandLogoHeight: $headBrandHeight - 30px;
+
+$containerWidth: 1200px;
+
+$slideScreenColor: #2C2B5B;
+
+$headBorderWidth: 1px;
+
+$headMenuTopBorderWidth: 0px;
+
+$ShowcaseTabColorBase: $colPrimary;
+
+$footLinesBackColor: $colSecondary;
+
+@function contrastColor($col1,$coldark,$collight){
+  @if (lightness($col1) > 50%){
+    @return $coldark;
+  }
+  @else{
+    @return $collight;
+  }
+}
+
+@import 'template-recolor';

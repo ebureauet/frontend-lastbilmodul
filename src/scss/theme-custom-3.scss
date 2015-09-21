@@ -22,6 +22,9 @@ $ShowcaseTabColorBase: $colSecondary;
 
 $footLinesBackColor: inherit;
 
+$navColorDark: $colPrimary;
+$navColorLight: $fontColLight;
+
 @function contrastColor($col1,$coldark,$collight){
   @if (lightness($col1) > 50%){
     @return $coldark;

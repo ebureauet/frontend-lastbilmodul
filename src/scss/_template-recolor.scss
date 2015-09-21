@@ -237,7 +237,7 @@ a{
   .navbar-nav{
     >li{
       >a{
-        color: contrastColor($colSecondary, $colPrimary, $fontColLight);
+        color: contrastColor($colExtra, $navColorDark, $navColorLight);
       }
       &:hover{
         >a{
@@ -257,8 +257,35 @@ a{
       }
     }
     .dropdown{
+      .dropdown-menu {
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 0px 0 0;
+        background-color: $colPrimary;
+        border: 0px solid darken($colPrimary,10%);
+        border-radius: 0px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        background-clip: padding-box;
+        >li{
+          >a{
+            padding: 3px 15px;
+            color: $fontColLight;
+            &:hover{
+              background-color:darken($colPrimary,10%);
+              color: $fontColLight;
+            }
+          }
+        }
+        .divider {
+          height: 1px;
+          margin: 10px 0;
+          background-color:darken($colPrimary,10%);
+        }
+      }
+
       >.dropdown-toggle{
-        color: contrastColor($colSecondary, $colPrimary, $fontColLight);
+        color: contrastColor($colSecondary, $navColorDark, $navColorLight);
         &:hover{
           color:$colPrimary;
         }
@@ -270,36 +297,12 @@ a{
         }
       }
     }
+
   }
 }
 
 
-.dropdown-menu {
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  background-color: $colPrimary;
-  border: 0px solid darken($colPrimary,10%);
-  border-radius: 0px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background-clip: padding-box;
-  >li{
-    >a{
-      padding: 3px 15px;
-      color: $fontColLight;
-      &:hover{
-        background-color:darken($colPrimary,10%);
-        color: $fontColLight;
-      }
-    }
-  }
-  .divider {
-    height: 1px;
-    margin: 10px 0;
-    background-color:darken($colPrimary,10%);
-  }
-}
+
 
 
 //layout responsive overrides

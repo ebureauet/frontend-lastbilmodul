@@ -1,26 +1,26 @@
 
-$colPrimary : #6864BD;
-$colSecondary : #5A54A4;
-$colExtra: #363536;
+$colPrimary : #015381;
+$colSecondary : #12427a;
+$colExtra: #042642;
 
 $fontColLight: #fff;
-$fontColDark: #333;
-$pageColor: #fff;
+$fontColDark: #444;
+$pageColor: #eee;
 
 $headBrandHeight: 80px;
-$headBrandLogoHeight:50px;
+$headBrandLogoHeight: $headBrandHeight - 20px;
 
 $containerWidth: 1000px;
 
-$slideScreenColor: #2C2B5B;
+$slideScreenColor: $colExtra;
 
-$headBorderWidth: 2px;
+$headBorderWidth: 0px;
 
 $headMenuTopBorderWidth: 0px;
 
-$ShowcaseTabColorBase: $colSecondary;
+$ShowcaseTabColorBase: $colPrimary;
 
-$footLinesBackColor: inherit;
+$footLinesBackColor: $colSecondary;
 
 $navColorDark: $colPrimary;
 $navColorLight: $fontColLight;

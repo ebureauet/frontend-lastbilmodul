@@ -61,6 +61,10 @@ a{
 					}
 				}
 			}
+      .langselect{
+        height:$headBrandHeight;
+        line-height:$headBrandHeight;
+      }
     }
   }
   .bottom-navbar{
@@ -274,6 +278,9 @@ a{
             &:hover{
               background-color:darken($colPrimary,10%);
               color: $fontColLight;
+            }
+            img{
+              margin-right:5px;
             }
           }
         }

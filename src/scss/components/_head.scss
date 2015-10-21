@@ -28,6 +28,20 @@
 					}
 				}
 			}
+			.langselect{
+				list-style:none;
+				float:right;
+				li{
+					vertical-align: middle;
+					display:inline-block;
+					margin:0 2px;
+					a{
+						span{
+							display: none;
+						}
+					}
+				}
+			}
 		}
 		.menu{
 			padding-left: 0;

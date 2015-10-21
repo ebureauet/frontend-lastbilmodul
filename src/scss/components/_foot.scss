@@ -18,18 +18,17 @@
 	}
 }
 .footlines {
-	.line-creditcards {
+	.line-creditcards, .line-images {
 		text-align: center;
-		height: 32px;
 		margin-top: 25px;
 		margin-bottom: 25px;
 		img {
 			line-height: 32px;
+			height: 32px;
 			vertical-align: middle;
 			display: inline;
-			margin: 0 5px;
-			height:100%;
 			width:auto;
+			margin:5px 5px;
 		}
 	}
 	.line-colophon {

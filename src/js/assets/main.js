@@ -149,6 +149,10 @@ $(function () {
 
   wall.fitWidth();
 
+	$('#adsQuad').find('.ad-item > a').each(function(){
+		var img = $(this).find('img').prop('src');
+		$(this).css('background-image','url('+img+')');
+	});
 
 
 });

@@ -1,0 +1,41 @@
+.ads-minibanners{
+  padding:10px 0;
+  text-align:center;
+  .ad-item{
+    padding:0px;
+    display: inline-block;
+    vertical-align:middle;
+    a{
+      width:100%;
+      display:block;
+      overflow:hidden;
+      padding:1px;
+      border:1px solid white;
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position:center;
+      img{
+        width:235px;
+        height:auto;
+      }
+    }
+  }
+  @include respond-to('handhelds'){
+    .ad-item{
+      a{
+        img{
+          width:140px;
+        }
+      }
+    }
+  }
+  @include respond-to('very-small'){
+    .ad-item{
+      a{
+        img{
+          width:80px;
+        }
+      }
+    }
+  }
+}

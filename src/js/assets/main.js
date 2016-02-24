@@ -71,6 +71,7 @@ $(document).ready(function(){
 });
 
 
+
 function lazyLoadImage(el) {
     if (typeof el === "undefined" || el === null)
         return;
@@ -94,8 +95,6 @@ $(window).bind("load", function() {
     $(".lazy").each(function() {
         lazyLoadImage(this);
     });
-
-
 });
 
 $(document).ready(function() {
@@ -103,56 +102,28 @@ $(document).ready(function() {
 });
 
 
-$(function () {
-  var wall = new freewall("#ads-container");
+//ADS FILTERING
+if ($('#ads-category').length){
+	var catBox = $('#ads-category'),
+	 listBox = $('#ads-container'),
+	 filter;
 
-  wall.reset({
-    selector: '.element-item',
-    animate: true,
-    cellW: 200,
-    cellH: 200,
-    fixSize: 0,
-    onResize: function () {
-        wall.refresh();
-    },
-    gutterX: 0,
-    gutterY: 0
-
-  });
-
-  wall.filter("*");
-
-  var adsCategory = $("#ads-category > li");
-
-  adsCategory.on("click", function (evt) {
-    var selectedClass = "selected";
-		$("#ads-category > li").removeClass(selectedClass);
-    $(this).toggleClass(selectedClass);
-
-    var filter = $(this).data('filter');
-    wall.filter(filter);
-
-  });
-
-	//added adssubcategory event listener so that stop propagation won't reach accordion bootstrap event
-	var adsSubCategory = $("#ads-category > li > ul");
-	adsSubCategory.on("click", "li", function (evt) {
-		var selectedClass = "selected";
-		$("#ads-category > li > ul > li").removeClass(selectedClass);
-		$(this).toggleClass(selectedClass);
-
-		var filter = $(this).data('filter');
-    wall.filter(filter);
-		evt.stopPropagation();
-    evt.preventDefault();
+	catBox.find('.btn-cat-filter').on('click', function(e){
+		if ($(this).hasClass('sub-filter')){
+			e.stopPropagation();
+		}
+		filter = $(this).data('filter');
+		listBox.find('.element-item').hide().filter(filter).fadeIn();
 	});
 
-  wall.fitWidth();
+}
+
+
+$(function () {
 
 	$('#adsQuad').find('.ad-item > a').each(function(){
 		var img = $(this).find('img').prop('src');
 		$(this).css('background-image','url('+img+')');
 	});
-
 
 });

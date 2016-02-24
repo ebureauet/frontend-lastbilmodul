@@ -206,7 +206,7 @@ a{
 #ads-container {
   .item-title{
     strong{
-      color: $colPrimary;
+      color: darken($colPrimary,20%);
     }
     &:hover{
       strong{

@@ -272,7 +272,19 @@ a{
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
         background-clip: padding-box;
         >li{
-          >a{
+            @include respond-to('tablets-desktop'){
+            &:hover{
+                
+                    >a{
+                        background-color:darken($colPrimary,10%);
+                        color: $fontColLight;
+                    }
+                }
+            }
+            ul{
+                background-color: $colPrimary;
+            }
+          a{
             padding: 3px 15px;
             color: $fontColLight;
             &:hover{

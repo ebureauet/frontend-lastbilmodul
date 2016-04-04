@@ -216,6 +216,18 @@ a{
   }
 }
 
+#adsMiniBanners {
+  &.bordered{
+    .ad-item{
+      a{
+        img{
+          background-color: lighten($colSecondary,20);
+          border: 2px solid lighten($colSecondary,20);
+        }
+      }
+    }
+  }
+}
 
 .category-overview{
   padding:10px 0;
@@ -274,7 +286,7 @@ a{
         >li{
             @include respond-to('tablets-desktop'){
             &:hover{
-                
+
                     >a{
                         background-color:darken($colPrimary,10%);
                         color: $fontColLight;

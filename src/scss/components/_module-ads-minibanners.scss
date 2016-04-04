@@ -5,23 +5,29 @@
     padding:0px;
     display: inline-block;
     vertical-align:middle;
+    min-height: 120px;
+    line-height:120px;
     a{
       width:100%;
-      display:block;
+      display:inline-block;
       overflow:hidden;
-      padding:1px;
-      border:1px solid white;
+      //padding:1px;
+      //border:1px solid white;
       background-size:cover;
       background-repeat:no-repeat;
+      vertical-align:middle;
       background-position:center;
       img{
-        width:235px;
-        height:auto;
+        width: 220px;
+        height: auto;
+
       }
     }
   }
   @include respond-to('handhelds'){
     .ad-item{
+      min-height: 90px;
+      line-height:90px;
       a{
         img{
           width:140px;
@@ -31,6 +37,8 @@
   }
   @include respond-to('very-small'){
     .ad-item{
+      min-height: 50px;
+      line-height:50px;
       a{
         img{
           width:80px;
@@ -40,14 +48,10 @@
   }
   &.bordered{
     .ad-item{
-      a{
-        img{
-          border: 2px solid #ccc;
-          border-radius: 10px;
-          padding: 10px;
-          background-color: #ccc;
-        }
-      }
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #ccc;
     }
 
   }

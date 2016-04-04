@@ -219,12 +219,8 @@ a{
 #adsMiniBanners {
   &.bordered{
     .ad-item{
-      a{
-        img{
-          background-color: lighten($colSecondary,20);
-          border: 2px solid lighten($colSecondary,20);
-        }
-      }
+      background-color: lighten($colSecondary,20);
+      border: 2px solid lighten($colSecondary,20);
     }
   }
 }

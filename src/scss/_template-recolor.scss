@@ -389,10 +389,21 @@ a{
 }
 
 .social-bar {
-  .social-bar__icon {
-    background: $socialIconBG;
-    a {
-      color: $socialIconColor;
+  &.social-bar--fixed {
+    .social-bar__icon {
+      background: $social-bg;
+      a {
+        color: $social-icon;
+      }
+    }
+  }
+  &.social-bar--mobile {
+    border-top-color: $colPrimary;
+    .social-bar__icon {
+      background: $social-bg-mob;
+      a {
+        color: $social-icon-mob;
+      }
     }
   }
 }

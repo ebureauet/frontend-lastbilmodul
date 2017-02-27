@@ -1,59 +1,104 @@
 
 $icon-big: 48px;
-$icon-small: 42px;
-
+$icon-small: 43px;
 .social-bar {
-  &.social-bar--fixed {
-    position: fixed;
-    right: 0;
-    z-index: 1040;
-  }
-  .social-bar__wrapper {
-    position: relative;
-    height: 528px;
-  }
 
   ul {
     list-style-type: none;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: auto;
-    width:  $icon-big;
     padding: 0px;
+    margin-bottom: 0px;
   }
+
   .social-bar__icon {
-    margin-bottom: 10px;
+    width:  $icon-big;
     height: $icon-big;
     background-color: #191D22;
     a {
-      color: #F09A29;
       display: block;
+      color: #F09A29;
       height: $icon-big;
+      width: $icon-big;
       line-height: $icon-big;
-      transition: transform .15s;
       &:before {
         font-size: $icon-big;
       }
     }
   }
+
+  &.social-bar--fixed {
+    position: fixed;
+    right: 0;
+    z-index: 1040;
+    .social-bar__wrapper {
+      position: relative;
+      height: 528px;
+    }
+    ul {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: auto;
+      width:  $icon-big;
+    }
+    .social-bar__icon {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.social-bar--mobile {
+    display: none;
+    width: 100%;
+    padding-bottom: 5px;
+    border-top: 2px solid #F09A29;
+    ul {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .social-bar__wrapper {
+      margin-top: 8px;
+    }
+    .social-bar__icon {
+      display: inline-block;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+
 }
 
 @include respond-to(handhelds) {
   .social-bar {
-    ul {
-      width: $icon-small;
+    &.social-bar--fixed {
+      display: none;
     }
-    .social-bar__icon {
-      height: $icon-small;
-      a {
-        height: $icon-small;
-        line-height: $icon-small;
+    &.social-bar--mobile {
+      display: block;
+    }
+  }
+}
 
-        &:before {
-          font-size: $icon-small;
+@include respond-to(very-small) {
+  .social-bar {
+    &.social-bar--mobile {
+      .social-bar__icon {
+        margin-right: 10px;
+        width:  $icon-small;
+        height: $icon-small;
+        a {
+          height: $icon-small;
+          width: $icon-small;
+          line-height: $icon-small;
+          &:before {
+            font-size: $icon-small;
+          }
         }
+      }
+      .social-bar__wrapper {
+        //width: 270px;
       }
     }
   }

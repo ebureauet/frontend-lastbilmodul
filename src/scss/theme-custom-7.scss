@@ -7,8 +7,10 @@ $fontColLight: #fff;
 $fontColDark: #444;
 $pageColor: #eee;
 
-$socialIconColor: #4a4a4a;
-$socialIconBG: $colPrimary;
+$social-bg: $colPrimary;
+$social-icon: #4a4a4a;
+$social-bg-mob: $social-bg;
+$social-icon-mob: $social-icon;
 
 $headBrandHeight: 90px;
 $headBrandLogoHeight: $headBrandHeight - 30px;

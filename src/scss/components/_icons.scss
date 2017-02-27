@@ -22,23 +22,20 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == test0 {
+	@if $filename == social-facebook {
 		$char: "\E001";
 	}
-	@if $filename == test1 {
+	@if $filename == social-instagram {
 		$char: "\E002";
 	}
-	@if $filename == test2 {
+	@if $filename == social-linkedin {
 		$char: "\E003";
 	}
-	@if $filename == test3 {
+	@if $filename == social-pinterest {
 		$char: "\E004";
 	}
-	@if $filename == test4 {
+	@if $filename == social-youtube {
 		$char: "\E005";
-	}
-	@if $filename == test5 {
-		$char: "\E006";
 	}
 
 	@return $char;
@@ -51,21 +48,18 @@
 	}
 }
 
-.icon-test0 {
-	@include icon(test0);
+.icon-social-facebook {
+	@include icon(social-facebook);
 }
-.icon-test1 {
-	@include icon(test1);
+.icon-social-instagram {
+	@include icon(social-instagram);
 }
-.icon-test2 {
-	@include icon(test2);
+.icon-social-linkedin {
+	@include icon(social-linkedin);
 }
-.icon-test3 {
-	@include icon(test3);
+.icon-social-pinterest {
+	@include icon(social-pinterest);
 }
-.icon-test4 {
-	@include icon(test4);
-}
-.icon-test5 {
-	@include icon(test5);
+.icon-social-youtube {
+	@include icon(social-youtube);
 }

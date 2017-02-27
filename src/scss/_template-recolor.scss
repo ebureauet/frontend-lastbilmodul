@@ -387,3 +387,12 @@ a{
 		}
 	}
 }
+
+.social-bar {
+  .social-bar__icon {
+    background: $socialIconBG;
+    a {
+      color: $socialIconColor;
+    }
+  }
+}

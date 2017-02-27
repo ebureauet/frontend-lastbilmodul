@@ -1,0 +1,60 @@
+
+$icon-big: 48px;
+$icon-small: 42px;
+
+.social-bar {
+  &.social-bar--fixed {
+    position: fixed;
+    right: 0;
+    z-index: 1040;
+  }
+  .social-bar__wrapper {
+    position: relative;
+    height: 528px;
+  }
+
+  ul {
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    width:  $icon-big;
+    padding: 0px;
+  }
+  .social-bar__icon {
+    margin-bottom: 10px;
+    height: $icon-big;
+    background-color: #191D22;
+    a {
+      color: #F09A29;
+      display: block;
+      height: $icon-big;
+      line-height: $icon-big;
+      transition: transform .15s;
+      &:before {
+        font-size: $icon-big;
+      }
+    }
+  }
+}
+
+@include respond-to(handhelds) {
+  .social-bar {
+    ul {
+      width: $icon-small;
+    }
+    .social-bar__icon {
+      height: $icon-small;
+      a {
+        height: $icon-small;
+        line-height: $icon-small;
+
+        &:before {
+          font-size: $icon-small;
+        }
+      }
+    }
+  }
+}

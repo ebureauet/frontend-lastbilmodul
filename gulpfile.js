@@ -66,7 +66,7 @@ gulp.task('sass-build', function() {
       notifyError(err, "SASS")
     })
     .pipe(autoprefixer({
-      browsers: ['ie 9', 'Android 3', 'firefox 20', 'last 2 versions'],
+      browsers: ['ie 9', 'Android 3', 'firefox 20', 'last 3 versions'],
       cascade: false
     }))
     .pipe(minifyCSS())

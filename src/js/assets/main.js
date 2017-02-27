@@ -126,4 +126,25 @@ $(function () {
 		$(this).css('background-image','url('+img+')');
 	});
 
+
+	$('.ads-minibanners.ribbon--center:not(.bordered)').each(function(){
+		/*
+		var notFourChildren = (($(this).find('.ad-item').length) % 4);
+		if (!notFourChildren){
+			$(this).addClass('has-four-items');
+		}
+		*/
+		var itemN = $(this).find('.ad-item').length;
+		var lineN = 4;
+		var modN = (itemN % 4);
+		if (modN){
+			var spacer = $('<div class="ad-item ad-item--spacer"></div>');
+			console.log(lineN - modN);
+			for(i=1; i<=(lineN - modN); i++){
+				spacer.clone().appendTo($(this));
+			}
+
+		}
+
+	});
 });

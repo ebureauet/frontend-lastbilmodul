@@ -1,0 +1,210 @@
+//vars
+$pageBgColor: #7F7F7F;
+$navBgColor: #545454;
+$borderRadius: 10px;
+
+$gradientBg : (
+  0% : #f3f3f3,
+  40% : #cccccc,
+  100% : #A7A7A7
+);
+
+
+//reset
+@import "normalize";
+@import "libs/bootstrap-robbin";
+
+@import "mixins/respond-to";
+@import "mixins/lineargradient";
+@import "mixins/lineargradientsvg";
+@import "mixins/gradient";
+
+
+body{
+  background-color: $pageBgColor;
+  font-size:16px;
+  @include respond-to('very-small'){
+    font-size:13px;
+  }
+}
+
+ul{
+  list-style:none;
+  padding-left:0;
+}
+
+a{
+  text-decoration: none!important;
+}
+
+%curvedCorners{
+  border-radius: 10px;
+}
+
+.page{
+  padding-top:10px;
+  padding-bottom:10px;
+  >.row{
+    >[class^="col-"], >[class*=" col-"] {
+      padding-top:5px;
+      padding-bottom:5px;
+    }
+  }
+  @include respond-to('large-screens'){
+    >.row{
+      >[class^="col-"], >[class*=" col-"] {
+        padding-top:10px;
+        padding-bottom:10px;
+      }
+    }
+  }
+}
+
+.navigation{
+  text-align:right;
+  ul{
+    @extend %curvedCorners;
+    display:inline-block;
+    margin:0;
+    padding:5px 20px;
+    background-color: $navBgColor;
+    text-align:center;
+    width:100%;
+    li{
+      display:inline-block;
+      a{
+        color:silver;
+        font-size:1em;
+        text-transform:uppercase;
+        &:after{
+          content:'-';
+          margin:0 10px;
+          color: silver!important;
+        }
+        &:hover{
+          color:white;
+        }
+      }
+      &:last-child{
+        a{
+          &:after{
+            display:none;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to('large-screens'){
+    ul{
+      width:auto;
+      margin:20px 0;
+    }
+  }
+}
+
+.topbar{
+  a{
+    span{
+      display:block;
+      text-align:center;
+      background-color: silver;
+      font-family: "Arial Narrow", arial, sans-serif;
+      text-transform: uppercase;
+      font-size:1.8em;
+      padding:15px 0;
+      @include gradient(90deg, $gradientBg);
+      em{
+        color:#FB0C0C;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+
+
+
+.inner-box{
+  @extend %curvedCorners;
+  background-color: silver;
+  @include gradient(90deg, $gradientBg);
+  overflow:hidden;
+  font-size: 1.2em;
+  font-family: "Arial Narrow", arial, sans-serif;
+  font-weight: bold;
+  padding:5px 10px;
+  line-height:30px;
+  display:block;
+  >*{
+    vertical-align: middle;
+  }
+  .title{
+    color:#337ab7;
+    margin-right:15px;
+    &--block{
+      display:block;
+    }
+    &--center{
+      text-align: center;
+    }
+  }
+  .title-caps{
+    color:#337ab7;
+    margin-right:15px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  a{
+    color:#FB0C0C;
+  }
+  ul{
+    display: inline-block;
+    text-align: right;
+    margin:0;
+    float: right;
+    li{
+      display: inline-block;
+      margin-left:10px;
+    }
+    &.items-list{
+      display:block;
+      float:none;
+      li{
+        margin:0;
+        a{
+          &.item{
+            display:block;
+            background-color: white;
+            padding-top:5px;
+            padding-bottom:5px;
+            border:1px solid silver;
+            >p{
+              font-size:0.7em;
+              font-family: Arial, sans-serif;
+              text-align: left;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.links{
+  .inblock-links{
+    .inner-box{
+      min-height:100px;
+    }
+  }
+}
+
+
+.isIE{
+  .inner-box{
+    filter: none;
+    background: silver url(../images/robbin-bg-gradient.png) top left no-repeat;
+    background-size: 100% 100%;
+  }
+}
